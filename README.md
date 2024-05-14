@@ -1,5 +1,5 @@
 1. Koks projektas?
-   "Mystic Brew Bazar"
+   "Mystic Brew Bazaar"
 2. Kokia funkciją atlieka projektas? Kokia jo nauda?
     Kompiuterinis žaidimas, kuriame gaminant eleksyrus reikia naudoti skirtingas ingridientų kombinacijas, kad vartotojas išvystų visas galimas žaidimo pabaigas. Pramoga.
 3. PC/mobile? Jei mobile - android/iOS?
