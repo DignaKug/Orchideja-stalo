@@ -9,7 +9,7 @@ Unity Hub
 	4.1. Kokia kalba/framework bus naudojama projektui?
    C# - Unity Hub
 	4.2. Ar bus naudojama duomenų bazė?
-   Bus naudojama duomenų bazė
-	4.3. Koks IDE labiausiai tinka pasirinktai kalbai? (pvz: C++ bus codeblocks, C# bus visual studio, Java bus IntelliJ, Javascript - VS code ir tt.)? Labiausiai tinka Unity Hub.
+   Nenaudojama duomenų bazė.
+	4.3. Koks IDE labiausiai tinka pasirinktai kalbai? (pvz: C++ bus codeblocks, C# bus visual studio, Java bus IntelliJ, Javascript - VS code ir tt.)? Labiausiai tinka Visual studio ir Unity Hub.
 5. Kokia darbo eiga? Koks darbo planas? 
 Eiga ir planas: pasiskirstyti kas darys kokią sistemos funkciją, sugeneruoti žaidimo idėja, sugalvoti visas įmanomas žaidimo pabaigas, viesiems išmokti dirbti su visual studio. 
