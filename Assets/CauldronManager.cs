@@ -13,6 +13,7 @@ public class CauldronManager : MonoBehaviour
             bubblingEffect.SetActive(true);
         }
 
+        // Make the specific object disappear
         if (objectToPut != null)
         {
             objectToPut.SetActive(false);
