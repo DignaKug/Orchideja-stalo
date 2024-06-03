@@ -5,7 +5,7 @@ using System.Linq;
 
 public class ButtonHandler : MonoBehaviour
 {
-    // Assign the buttons in the inspector
+  
     public Button[] PotionasButtons;
     public Button[] KietaButtons;
     public Button[] RandomButtons;
@@ -18,19 +18,19 @@ public class ButtonHandler : MonoBehaviour
     {
         foreach (var button in PotionasButtons)
         {
-            Button capturedButton = button; // Capture the button variable
+            Button capturedButton = button; 
             capturedButton.onClick.AddListener(() => OnPotionasButtonClick(capturedButton));
         }
 
         foreach (var button in KietaButtons)
         {
-            Button capturedButton = button; // Capture the button variable
+            Button capturedButton = button; 
             capturedButton.onClick.AddListener(() => OnKietaButtonClick(capturedButton));
         }
 
         foreach (var button in RandomButtons)
         {
-            Button capturedButton = button; // Capture the button variable
+            Button capturedButton = button;
             capturedButton.onClick.AddListener(() => OnRandomButtonClick(capturedButton));
         }
     }

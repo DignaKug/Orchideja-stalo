@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,11 +7,25 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        TooltipManager._instance.SetAndShowToolTip(message);
+        if (TooltipManager._instance != null)
+        {
+            TooltipManager._instance.SetAndShowToolTip(message);
+        }
+        else
+        {
+            Debug.LogWarning("TooltipManager instance is null. Cannot display tooltip.");
+        }
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-        TooltipManager._instance.HideToolTip();
+        if (TooltipManager._instance != null)
+        {
+            TooltipManager._instance.HideToolTip();
+        }
+        else
+        {
+            Debug.LogWarning("TooltipManager instance is null. Cannot hide tooltip.");
+        }
     }
 }
