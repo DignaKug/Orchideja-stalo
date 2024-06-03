@@ -5,7 +5,6 @@ using System.Linq;
 
 public class ButtonHandler : MonoBehaviour
 {
-  
     public Button[] PotionasButtons;
     public Button[] KietaButtons;
     public Button[] RandomButtons;
@@ -18,13 +17,13 @@ public class ButtonHandler : MonoBehaviour
     {
         foreach (var button in PotionasButtons)
         {
-            Button capturedButton = button; 
+            Button capturedButton = button;
             capturedButton.onClick.AddListener(() => OnPotionasButtonClick(capturedButton));
         }
 
         foreach (var button in KietaButtons)
         {
-            Button capturedButton = button; 
+            Button capturedButton = button;
             capturedButton.onClick.AddListener(() => OnKietaButtonClick(capturedButton));
         }
 
@@ -68,13 +67,38 @@ public class ButtonHandler : MonoBehaviour
                                           .OrderByDescending(g => g.Count())
                                           .ThenBy(g => g.Key)
                                           .First().Key;
-            LoadScene(mostCommonNumber);
+
+            if (selectedPotionas == 3 && selectedKieta == 3 && selectedRandom == 3)
+            {
+                LoadScene(3); // Load Scene 3 if all selections are 3
+            }
+            else if (mostCommonNumber == 4)
+            {
+                LoadScene(4); // Load Scene 4 if the most common number is 4
+            }
+            else if (mostCommonNumber == 2 || mostCommonNumber == 3)
+            {
+                LoadScene(2); // Load Scene 2 if the most common number is 2 or 3
+            }
+            else
+            {
+                LoadScene(1); // Load Scene 1 otherwise
+            }
         }
     }
 
     void LoadScene(int sceneNumber)
     {
-        string sceneName = "Scene" + sceneNumber;
-        SceneManager.LoadScene(sceneName);
+        if (sceneNumber == 4)
+        {
+            // Shut down the game if Scene 4 is loaded
+            Application.Quit();
+        }
+        else
+        {
+            // Load the scene
+            string sceneName = "Scene" + sceneNumber;
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

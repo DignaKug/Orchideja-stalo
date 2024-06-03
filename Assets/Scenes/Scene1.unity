@@ -216,8 +216,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 944692900}
   - {fileID: 297380374}
+  - {fileID: 944692900}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -257,7 +257,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 199943452}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6e4f2347deed17a4a9c38944de1792e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16c644806ba765c47b1ed7ce4482b929, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -376,15 +376,15 @@ RectTransform:
   m_GameObject: {fileID: 944692899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5008999, y: 1.5009, z: 1.5008999}
+  m_LocalScale: {x: 1.6247241, y: 1.6247243, z: 1.6247241}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 199943452}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137, y: -53}
+  m_AnchoredPosition: {x: -183, y: -48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &944692901
@@ -455,11 +455,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 944692899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19090230389edb64a9735b5266b8ce75, type: 3}
+  m_Script: {fileID: 11500000, guid: d30146e3ae576274bbf6b2f8a1979798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   previousSceneName: bazaar
-  animationDuration: 2.1
+  animationDuration: 3.1
 --- !u!1 &1063704779
 GameObject:
   m_ObjectHideFlags: 0
