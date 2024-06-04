@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Linq;
+using System.Collections;
 
 public class ButtonHandler : MonoBehaviour
 {
@@ -37,18 +38,21 @@ public class ButtonHandler : MonoBehaviour
     void OnPotionasButtonClick(Button button)
     {
         selectedPotionas = ExtractNumberFromButton(button);
+        Debug.Log("Potionas selected: " + selectedPotionas);
         CheckSelectionsAndLoadScene();
     }
 
     void OnKietaButtonClick(Button button)
     {
         selectedKieta = ExtractNumberFromButton(button);
+        Debug.Log("Kieta selected: " + selectedKieta);
         CheckSelectionsAndLoadScene();
     }
 
     void OnRandomButtonClick(Button button)
     {
         selectedRandom = ExtractNumberFromButton(button);
+        Debug.Log("Random selected: " + selectedRandom);
         CheckSelectionsAndLoadScene();
     }
 
@@ -70,18 +74,22 @@ public class ButtonHandler : MonoBehaviour
 
             if (selectedPotionas == 3 && selectedKieta == 3 && selectedRandom == 3)
             {
+                Debug.Log("Loading Scene 3");
                 LoadScene(3); // Load Scene 3 if all selections are 3
             }
             else if (mostCommonNumber == 4)
             {
+                Debug.Log("Loading Scene 4");
                 LoadScene(4); // Load Scene 4 if the most common number is 4
             }
             else if (mostCommonNumber == 2 || mostCommonNumber == 3)
             {
+                Debug.Log("Loading Scene 2");
                 LoadScene(2); // Load Scene 2 if the most common number is 2 or 3
             }
             else
             {
+                Debug.Log("Loading Scene 1");
                 LoadScene(1); // Load Scene 1 otherwise
             }
         }
@@ -91,14 +99,25 @@ public class ButtonHandler : MonoBehaviour
     {
         if (sceneNumber == 4)
         {
-            // Shut down the game if Scene 4 is loaded
-            Application.Quit();
+            Debug.Log("Scene 4 selected, loading and then quitting application.");
+            StartCoroutine(LoadSceneAndQuit("Scene4"));
         }
         else
         {
             // Load the scene
             string sceneName = "Scene" + sceneNumber;
+            Debug.Log("Loading scene: " + sceneName);
             SceneManager.LoadScene(sceneName);
         }
+    }
+
+    IEnumerator LoadSceneAndQuit(string sceneName)
+    {
+        // Load the scene
+        SceneManager.LoadScene(sceneName);
+        // Wait until the next frame before quitting to ensure the scene loads
+        yield return null;
+        Debug.Log("Application is quitting.");
+        Application.Quit();
     }
 }
